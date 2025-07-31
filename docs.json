@@ -18,50 +18,32 @@
         "group": "Getting started",
         "pages": [
           "index",
-          "quickstart",
-          "development"
+          "quickstart"
         ]
       },
       {
-        "group": "Customization",
+        "group": "Guides",
         "pages": [
           "essentials/settings",
           "essentials/navigation"
-        ]
-      },
-      {
-        "group": "Writing content",
-        "pages": [
-          "essentials/markdown",
-          "essentials/code",
-          "essentials/images",
-          "essentials/reusable-snippets"
-        ]
-      },
-      {
-        "group": "AI tools",
-        "pages": [
-          "ai-tools/cursor",
-          "ai-tools/claude-code",
-          "ai-tools/windsurf"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Blog",
+          "href": "https://www.airtop.ai/blog",
           "icon": "book-open-cover"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.com",
+          "icon": "discord"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "anchor": "Changelog",
+          "href": "https://airtop.ai/changelog",
           "icon": "newspaper"
         }
       ]
@@ -72,16 +54,10 @@
     "dark": "/logo/logo.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://portal.airtop.ai"
     }
   },
   "contextual": {
@@ -98,9 +74,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/"
     }
   }
 }
