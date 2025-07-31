@@ -3,9 +3,9 @@
   "theme": "almond",
   "name": "Airtop",
   "colors": {
-    "primary": "#047481",
-    "light": "#ff0000",
-    "dark": "#047481"
+    "primary": "#0891B2",
+    "light": "#0891B2",
+    "dark": "#0891B2"
   },
   "appearance": {
     "default": "light",
