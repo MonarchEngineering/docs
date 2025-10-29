@@ -334,7 +334,7 @@ Example of accordion groups:
 ### Cards and columns for emphasizing information
 
 Example of cards and card groups:
-
+```
 <Card title="Getting started guide" icon="rocket" href="/quickstart">
 Complete walkthrough from installation to your first API call in under 10 minutes.
 </Card>
@@ -348,6 +348,7 @@ Complete walkthrough from installation to your first API call in under 10 minute
   Understand rate limits and best practices for high-volume usage.
 </Card>
 </CardGroup>
+```
 
 ### API documentation components
 
@@ -417,6 +418,7 @@ Complete user object with all associated data.
 
 Wrap all images in frames:
 
+```
 <Frame>
 <img src="/images/dashboard.png" alt="Main dashboard showing analytics overview" />
 </Frame>
@@ -424,6 +426,7 @@ Wrap all images in frames:
 <Frame caption="The analytics dashboard provides real-time insights">
 <img src="/images/analytics.png" alt="Analytics dashboard with charts" />
 </Frame>
+```
 
 #### Videos
 
