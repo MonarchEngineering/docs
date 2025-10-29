@@ -15,40 +15,39 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting started",
+        "group": "Guides",
         "pages": [
-          "index",
-          "quickstart"
+          "guides/introduction",
+          "guides/quick-start",
+          "guides/authentication",
+          "guides/bot-detection",
+          "guides/triggers"
         ]
       },
       {
-        "group": "Guides",
+        "group": "Integrations",
         "pages": [
-          "essentials/settings",
-          "essentials/navigation"
+          "integrations/airtable",
+          "integrations/github",
+          "integrations/google-calendar",
+          "integrations/google-docs",
+          "integrations/google-mail",
+          "integrations/google-sheets",
+          "integrations/google-drive",
+          "integrations/hubspot",
+          "integrations/slack",
+          "integrations/linkedin",
+          "integrations/web-search",
+          "integrations/n8n",
+          "integrations/zapier",
+          "integrations/make"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Blog",
-          "href": "https://www.airtop.ai/blog",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://discord.com",
-          "icon": "discord"
-        },
-        {
-          "anchor": "Changelog",
-          "href": "https://airtop.ai/changelog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
+  "global": {
+      "anchors": []
+    },
   "logo": {
     "light": "/logo/logo.svg",
     "dark": "/logo/logo.svg"
@@ -66,17 +65,13 @@
      "view",
      "chatgpt",
      "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
+     "perplexity"
    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/",
-      "github": "https://github.com/",
-      "linkedin": "https://linkedin.com/"
+      "x": "https://x.com/airtop_ai",
+      "linkedin": "https://www.linkedin.com/company/airtop-ai"
     }
   }
 }
