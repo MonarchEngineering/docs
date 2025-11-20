@@ -7,7 +7,7 @@ There are two ways to get started with Airtop. You can either start an agent fro
 
 ## What Should I Automate?
 
-Airtop is best automating repetitive tasks that require interacting with the web. If you have a task that needs to be completed daily, weekly, or monthly, and it involves logging in to websites or interacting with web pages, then Airtop is the right choice.
+Airtop is best automating repetitive tasks that require interacting with the web. If you have a task that needs to be completed daily, weekly, or monthly, and it involves interacting with the web, including navigating to websites, logging in to services or filling out webforms, then Airtop is the right choice.
 
 Some good use-cases for Airtop are: 
 
@@ -16,6 +16,7 @@ Some good use-cases for Airtop are:
 - Lead generation
 - Monitoring social media
 - Engaging with social media posts
+- Really anything you can think of...
 
 Any web-based task that needs to be completed on a consistent basis is a good candidate for automation with Airtop.
 
@@ -23,11 +24,21 @@ Any web-based task that needs to be completed on a consistent basis is a good ca
 
 Templates are the fastest way to start automating the web with Airtop.
 
-Airtop templates are pre-built, customizable automations built by the Airtop community. These templates have been tested and approved by Airtop.
+Airtop templates are pre-built, customizable automations built by the Airtop and our community. These templates have been tested and approved by Airtop.
 
 Remixing a template takes substantially less time than building a custom agent. They also require fewer credits to build with than starting from scratch, as much of the automation legwork has already been completed.
 
-To remix a template, go to [airtop.ai/templates](https://www.airtop.ai/templates), select a template that fits you needs, and click "Try Agent." Then simply tell the Agent Builder how you'd like to change the template. If the template is already very similar to what you need, then you will just need to connect the necessary integrations and adjust any desired parameters. The Agent Builder will guide you through this process.
+To remix a template, go to [Templates](https://www.airtop.ai/templates), select a template that fits you needs, and click "Try Agent." Then simply tell the Assistant how you'd like to change the template. If the template is already very similar to what you need, then you will just need to connect the necessary integrations and adjust any desired parameters. The Assistant will guide you through this process step-by-step.
+
+<Frame caption="Browse ready-made templates">
+  <img src="/images/quickstart/templates.png" alt="Airtop templates list" />
+</Frame>
+
+<br />
+
+<Frame caption="Select a template and click 'Try Agent'">
+  <img src="/images/quickstart/template-details.png" alt="Airtop template details" />
+</Frame>
 
 If you will need to radically change a template to fit your needs – for instance, if the template has little to do with your intended use-case – then it will be faster to start from scratch.
 
@@ -35,7 +46,7 @@ If you will need to radically change a template to fit your needs – for instan
 
 If there are no templates that fit your automation needs, then you can build an agent from scratch.
 
-Navigate to: [portal.airtop.ai/agents](https://portal.airtop.ai/agents)
+Navigate to: [Agents](https://portal.airtop.ai/agents)
 
 Sign in or create an account if needed.
 
@@ -45,30 +56,47 @@ Click "+ Create New Agent" in the top righthand corner of the Airtop Portal.
 
 Then describe what you want to automate. It is best to be clear and concise with your prompt.
 
-Start with a simple prompt, then work with the Agent Builder to expand and fine-tune your automation. For instance, _"Build an automation that reads new messages in a Slack channel, creates a summary of those messages, and then sends that Summary to a different Slack channel"_ is a good prompt. The details will be worked out with the Agent Builder.
+<Frame caption="Write a prompt to describe what you want to automate">
+  <img src="/images/quickstart/new-agent.png" alt="Airtop new agent" />
+</Frame>
 
-**Working with the Agent Builder**
+Start with a simple prompt, then work with the Assistant to expand and fine-tune your automation.
 
-The Agent Builder will work with you to connect any integrations you'll need (like Slack), specify which Slack channel(s) to monitor, and what kind of summary to create. There is no need to specify all of this information in the intial prompt.
+**Working with the Assistant**
 
-If you see that the Agent Builder is doing something you don't want it to do, you can correct it at any time in the chat box. Don't hesitate to interrupt it!
+The Assistant will work with you to connect any integrations you'll need (like Slack), specify which Slack channel(s) to monitor, and what kind of summary to create. There is no need to specify all of this information in the intial prompt.
 
-Agent sessions are **saved automatically**. If you need to leave the agent builder, or your session times out, you can return to the same project and pick up where you left off.
+If you see that the Assistant is doing something you don't want it to do, you can correct it at any time in the chat box. Don't hesitate to interrupt it!
 
-The Agent Builder will write the automation code for you, test it, and fix any problems that it encounters along the way. For the majority of this process, you just have to sit back and relax. 
+Agent sessions are **saved automatically**. If you need to leave the Assistant, or your session times out, you can return to the same project and pick up where you left off.
 
-The Agent Builder will ping you if it needs approval or clarification. Make sure to turn on desktop notifications!
+The Assistant will write the automation code for you, test it, and fix any problems that it encounters along the way. For the majority of this process, you just have to sit back and relax. 
+
+The Assistant will ping you if it needs approval or clarification. Make sure to turn on desktop notifications!
 
 **Deploying and Scheduling an Agent**
 
-Once you are satisfied with your agent, it's time to deploy! Click "Deploy" in the top-right corner. This will finalize your agent and make it available for scheduling and triggering.
+Once you are satisfied with your agent, it's time to deploy! Click "Deploy" in the chat or top-right corner. This will finalize your agent and make it available for scheduling and triggering.
 
-Agents can be scheduled to run automatically, or they can be triggered by Webhooks.
+<Frame caption="Click 'Deploy' to finalize your agent">
+  <img src="/images/quickstart/deploy-button.png" alt="Airtop deploy agent" />
+</Frame>
 
-You can also trigger an agent manually by clicking "Run" next to "Past Runs" on the Agent page.
+On the Deploy popup, you can configure the agent's schedule and trigger options. You can either schedule the agent to run automatically, or leave it without a schedule to trigger manually or via a webhook or external service.
 
-**Creating a Template**
+<Frame caption="Configure the agent's schedule and trigger options">
+  <img src="/images/quickstart/deploy-modal.png" alt="Airtop deploy modal" />
+</Frame>
 
-If you want to submit your agent to the Airtop community, click "Share." This will automatically anonymize any sensitive data in your Agent (API keys, login information, etc) and create a template description page. You can edit the template description page or leave it as-is, and submit your template to the Airtop team for review. 
+
+**Sharing an Agent as a Template**
+
+If you want share your agent with others, or submit your agent to the Airtop community, click "Share." 
+
+This will automatically anonymize any sensitive data in your Agent (API keys, login information, etc) and create a template description page. You can edit the template description page or leave it as-is, and submit your template to the Airtop team for review, or send a private link to anyone.
+
+<Frame caption="Click 'Share' to create a template">
+  <img src="/images/quickstart/share.png" alt="Airtop share button" />
+</Frame>
 
 We appreciate your contribution to the community!

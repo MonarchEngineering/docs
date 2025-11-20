@@ -1,12 +1,57 @@
 ---
 title: "Authentication"
-description: "Learn how to authenticate with Airtop"
+description: "Learn how to authenticate to services with Airtop"
 ---
 
 ## Overview
 
-This guide covers the different authentication methods available for accessing Airtop's API and services.
+When you build an agent with Airtop, it might interact with services via APIs, or via a web browser. Airtop supports a [few direct API integrations](https://portal.airtop.ai/integrations), but uses a web browser for anything else. Airtop lets you authenticate with both types of services, in a way that is easy to manage, secure, and allows your agent to access those services in the background.
 
 ## Integrations
 
+Airtop supports a few [API Integrations](https://portal.airtop.ai/integrations). If you ask Airtop to use one of these services, the assistant will prompt you to authenticate.
+
+First, you'll be prompted to authenticate with the service.
+<Frame>
+<img src="/images/authentication/auth1.png" alt="Airtop API integration authentication prompt" />
+</Frame> 
+
+Once you click the "Authorize API Access" button, you'll be redirected to the service's authentication page.
+<Frame>
+<img src="/images/authentication/auth2.png" alt="Airtop web profile authentication setup" />
+</Frame>
+
+Finally, once you've successfully authenticated, you'll see a confirmation message that Airtop can now access the service.
+<Frame>
+<img src="/images/authentication/auth3.png" alt="Airtop web profile confirmation" />
+</Frame>
+
+You'll see that Airtop can now access the service on your behalf while you're building your agent, and once you've confirmed, in the background taking care of business for you.
+
 ## Web Profiles
+
+For services that don't have direct API integrations, Airtop uses web browser profiles to authenticate and interact with websites. These profiles are created and managed by Airtop, so you don't have to worry about managing them. 
+
+Each Agent, has its own profile. When the Assistant detects that you need to be logged into a site to access it, it will prompt you to authenticate. You can log into the site directly in the embedded browser, and let the assistant know when you're done.
+
+<Frame caption="The Assistant will prompt you to authenticate when needed">
+  <img src="/images/authentication/profile-log-in.png" alt="Airtop web profile authentication prompt" />
+</Frame>
+
+Once you've logged in, the profile will store all necessary cookies and re-use them when the agent runs in the background, so you don't have to log in every time. 
+
+### Expiring Credentials
+
+Although Airtop will store your credentials for you, some sites periodically expire cookies, requiring you to log in again. If that happens, your agent will email you and let you know that it cannot log in to the target site. You can create a new version of your agent and let the Assistant know you need to re-authenticate, and it will guide you through the process.
+
+### Clearing a Web Profile
+
+If you need to clear the profile, for any reason, you can do so by clicking the "Clear" button in the Browser Profile settings page.
+
+<Frame caption="Click 'Clear' to clear the profile">
+  <img src="/images/authentication/clear-cookies.png" alt="Airtop web profile clear" />
+</Frame>
+
+### Security
+
+Web profiles are secure and encrypted at several layers. First, the profile is encrypted at rest while on our servers using AES-256 encryption. Second, once loaded into the browser, the profile is encrypted in memory using the same rock solid encryption that your Chrome browser uses for you local cookies. And third, every web browser runs on its own separate virtual machine so there is no risk of cross-contamination between browsers. We take security very seriously and are regularly audited by third-party security experts, and are SOC 2, and HIPAA compliant. You can learn more about our security practices in our [Trust Center](https://trust.airtop.ai).
