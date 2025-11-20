@@ -26,19 +26,19 @@ Finally, once you've successfully authenticated, you'll see a confirmation messa
 <img src="/images/authentication/auth3.png" alt="Airtop web profile confirmation" />
 </Frame>
 
-You'll see that Airtop can now access the service on your behalf while you're building your agent, and once you've confirmed, in the background taking care of business for you.
+You'll see that Airtop can now access the service on your behalf while you're building your agent, and once deployed, it will continue to access the service in the background.
 
 ## Web Profiles
 
 For services that don't have direct API integrations, Airtop uses web browser profiles to authenticate and interact with websites. These profiles are created and managed by Airtop, so you don't have to worry about managing them. 
 
-Each Agent, has its own profile. When the Assistant detects that you need to be logged into a site to access it, it will prompt you to authenticate. You can log into the site directly in the embedded browser, and let the assistant know when you're done.
+Each agent has its own profile. When the Assistant detects that you need to be logged into a site to access it, it will prompt you to authenticate. You can log into the site directly in the embedded browser and let the assistant know when you're done.
 
 <Frame caption="The Assistant will prompt you to authenticate when needed">
   <img src="/images/authentication/profile-log-in.png" alt="Airtop web profile authentication prompt" />
 </Frame>
 
-Once you've logged in, the profile will store all necessary cookies and re-use them when the agent runs in the background, so you don't have to log in every time. 
+Once you've logged in, the profile will store all necessary cookies and reuse them when the agent runs in the background, so you don't have to log in every time. 
 
 ### Expiring Credentials
 
@@ -54,4 +54,4 @@ If you need to clear the profile, for any reason, you can do so by clicking the 
 
 ### Security
 
-Web profiles are secure and encrypted at several layers. First, the profile is encrypted at rest while on our servers using AES-256 encryption. Second, once loaded into the browser, the profile is encrypted in memory using the same rock solid encryption that your Chrome browser uses for you local cookies. And third, every web browser runs on its own separate virtual machine so there is no risk of cross-contamination between browsers. We take security very seriously and are regularly audited by third-party security experts, and are SOC 2, and HIPAA compliant. You can learn more about our security practices in our [Trust Center](https://trust.airtop.ai).
+Web profiles are secure and encrypted at several layers. First, the profile is encrypted at rest while on our servers using AES-256 encryption. Second, once loaded into the browser, the profile is encrypted in memory using the same rock solid encryption that your Chrome browser uses for your local cookies. And third, every web browser runs on its own separate virtual machine so there is no risk of cross-contamination between browsers. We take security very seriously and are regularly audited by third-party security experts, and are SOC 2, and HIPAA compliant. You can learn more about our security practices in our [Trust Center](https://trust.airtop.ai).

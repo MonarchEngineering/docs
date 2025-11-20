@@ -92,7 +92,7 @@ docs/
 │   ├── introduction.mdx
 │   ├── quick-start.mdx
 │   ├── authentication.mdx
-│   ├── bot-detection/     # Bot detection sub-guides
+│   ├── bot-detection.mdx
 │   └── triggers.mdx
 ├── integrations/          # Integration documentation
 │   ├── airtable.mdx
@@ -133,7 +133,7 @@ The main configuration is in `docs.json`. This file contains:
 Run with sudo: `sudo npm i -g mint`
 
 **Local preview doesn't match production**
-Run `mint update` to get the latest changes
+Run `mint update` to get the latest changes.
 
 **Unknown error**
 Delete the `~/.mintlify` folder and run `mint dev` again

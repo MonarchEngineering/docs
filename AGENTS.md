@@ -34,9 +34,7 @@ docs/
 │   ├── introduction.mdx   # Main intro page (moved from index.mdx)
 │   ├── quick-start.mdx    # Quick start guide (moved from quickstart.mdx)
 │   ├── authentication.mdx
-│   ├── bot-detection/     # Bot detection sub-guides
-│   │   ├── captcha-solving.mdx
-│   │   └── proxy-support.mdx
+│   ├── bot-detection.mdx
 │   └── triggers.mdx
 ├── integrations/          # Integration documentation
 │   ├── airtable.mdx
