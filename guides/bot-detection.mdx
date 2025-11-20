@@ -8,12 +8,44 @@ description: "Understanding and configuring bot detection avoidance strategies"
 Airtop is designed to avoid bot detection as much as possible. We use a variety of techniques to do this, including:
 * Running a real browser in the cloud, not a headless browser
 * Advanced fingerprinting techniques
-* Residential proxy network Integration
+* Residential proxy network integration
 * Automated captcha solving
-* And many more...
+* And much more...
 
-For the most part, you don't have to worry about bot detection and configuration; Airtop takes care of it for you. However, there are a few things you can do to help if you run into issues.
+For the most part, you don't have to worry about bot detection and configuration; Airtop takes care of it for you. However, there are a few things you can do to help if you run into issues. We'll cover some of these in this guide.
 
 ## Configuring Residential Proxies
 
+By default, Airtop issues traffic from within a cloud datacenter. However, some sites will block traffic coming from the cloud. To avoid this, you can configure Airtop to use a residential proxy network. 
+
+If you notice that your agent is being blocked or presented with a CAPTCHA, you can try enabling the integrated proxy network by going to the Agent's Settings page and enabling the Integrated proxy.
+
+<Frame caption="Enable the integrated proxy network">
+  <img src="/images/bot-detection/proxy-integrated.png" alt="Airtop enable proxy" />
+</Frame>
+
+This will route traffic through a residential proxy network, which is less likely to be blocked by sites. Your agents may run a bit slower with this option enabled, but it's a good way to avoid being blocked. You can specify the proxy country you want to use. We recommend using a country that is close to your target audience.
+
+### Using Your Own Proxy Server
+
+The integrated proxy service has a few domains that it cannot access. If you try to access one of these domains, you'll see a failure to load the site. These domains are:
+
+* Some streaiming services like (e.g., Netflix)
+* Some banking and other financial institutions
+* Ticketing sites like Ticketmaster
+
+If you need to access one of these domains, you can use a custom proxy instead, which may have fewer restrictions. In this model, you pay the proxy provider directly and simply give us the configuration options to be used by your agents.
+
+Here are some providers that we've tested and have reasonable quality:
+1. [Oxylabs](https://oxylabs.io)
+2. [Smartproxy](https://smartproxy.com)
+3. [IPRoyal](https://iproyal.com)
+
+
 ## Constraining Your Agent's Behavior
+
+In some cases, it's not the source of traffic that is being blocked, but rather the behavior of the agent itself that may be detected as bot-like. To help avoid this, you can configure your agent to behave more like a human.
+
+For example, slow down your agent's actions or restriction the number of actions per session. Say you're extracting content from a website and navigating to 1000 pages as quickly as possible. That may be detected as bot-like behavior, whereas going to 10 pages within a few minutes may not be. You can ask the Assistant to slow down the agent's actions, or restrict the number of actions per session.
+
+If you are getting blocked, not upon loading a site, but after a few seconds or minutes of activity, think about what you're doing that appears non-human, and ask the Assistant to adjust your agent's behavior.
