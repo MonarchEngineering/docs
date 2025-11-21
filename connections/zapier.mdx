@@ -1,0 +1,51 @@
+---
+title: "Connect Airtop with Zapier"
+sidebarTitle: "Zapier"
+icon: "/images/connections/zapier-logo.svg"
+description: "Connect Airtop Agents with Zapier to automate workflows and integrate with thousands of apps."
+keywords: ["Zapier", "connections", "integrations", "automation"]
+---
+
+## Overview
+
+[Zapier](https://zapier.com) is a no-code automation tool that connects your favorite apps into automated workflows. After you **deploy** your Agent, you can trigger it directly from Zapier and use the results in your Zaps.
+
+## Run your deployed Agent from Zapier
+
+<Steps>
+  <Step title="Open connection settings">
+    Navigate to your Agent's build page and click **Connect**, then select **Zapier** from the dropdown.
+  </Step>
+
+  <Step title="Add the Airtop action">
+    In your Zapier recipe (Zap), add the action **Run an Airtop agent** from the Airtop integration.
+    <Frame>
+      <img src="/images/connections/zapier-add-airtop.gif" alt="Add Airtop action in Zapier" />
+    </Frame>
+  </Step>
+
+  <Step title="Configure the Webhook URL">
+    Enter the Webhook URL from the connection modal into the **Webhook URL** field.
+    ```bash
+    # Example of a Webhook URL
+    https://api.airtop.ai/api/hooks/agents/{agent-id}/webhooks/{webhook-id}
+    ```
+  </Step>
+
+  <Step title="Set Agent parameters">
+    Paste the Agent's parameters from the connection modal into the **JSON** field in the Zapier action.
+    ```json
+    // Example of Agent parameters
+    {
+      "configVars": {
+        // Your Agent's configuration variables
+      }
+    }
+    ```
+  </Step>
+
+  <Step title="Test the step and save">
+    Test the step to ensure the connection works, then save your Zap.
+  </Step>
+</Steps>
+

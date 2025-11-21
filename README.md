@@ -99,6 +99,11 @@ docs/
 │   ├── github.mdx
 │   ├── google-*.mdx
 │   └── ...
+├── connections/           # External service integrations
+│   ├── make.mdx
+│   ├── n8n.mdx
+│   ├── zapier.mdx
+│   └── ...
 ├── images/               # Static images
 ├── logo/                 # Logo assets
 ├── docs.json            # Mintlify configuration
