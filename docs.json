@@ -20,27 +20,15 @@
           "guides/introduction",
           "guides/quick-start",
           "guides/authentication",
-          "guides/bot-detection",
-          "guides/triggers"
+          "guides/bot-detection"
         ]
       },
       {
-        "group": "Integrations",
+        "group": "Connections",
         "pages": [
-          "integrations/airtable",
-          "integrations/github",
-          "integrations/google-calendar",
-          "integrations/google-docs",
-          "integrations/google-mail",
-          "integrations/google-sheets",
-          "integrations/google-drive",
-          "integrations/hubspot",
-          "integrations/slack",
-          "integrations/linkedin",
-          "integrations/web-search",
-          "integrations/n8n",
-          "integrations/zapier",
-          "integrations/make"
+          "connections/make",
+          "connections/n8n",
+          "connections/zapier"
         ]
       }
     ]
