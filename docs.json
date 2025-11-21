@@ -30,6 +30,10 @@
           "connections/n8n",
           "connections/zapier"
         ]
+      },
+      {
+        "group": "Agent API",
+        "openapi": "openapi.json"
       }
     ]
   },

@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Airtop Agents",
+    "version": "1.0.0",
+    "description": "API documentation for Airtop Agent interactions."
+  },
+  "servers": [
+    {
+      "url": "https://api.airtop.ai",
+      "description": "Main API server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "API Key",
+        "description": "Enter your API Key. You can generate one at [https://portal.airtop.ai/api-keys](https://portal.airtop.ai/api-keys)."
+      }
+    },
+    "schemas": {
+      "TriggerAgentRequest": {
+        "type": "object",
+        "properties": {
+          "configVars": {
+            "type": "object",
+            "description": "Configuration variables for the agent session",
+            "example": {
+              "slackChannel": "#general"
+            }
+          },
+          "callbackConfig": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "The URL to call when the agent finishes execution"
+              },
+              "headers": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "description": "Headers to include in the callback request"
+              }
+            }
+          }
+        }
+      },
+      "TriggerAgentResponse": {
+        "type": "object",
+        "properties": {
+          "invocationId": {
+            "type": "string",
+            "description": "Unique identifier for the agent invocation"
+          }
+        }
+      },
+      "InvocationResultResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "completed",
+              "running",
+              "failed"
+            ],
+            "description": "Current status of the invocation"
+          },
+          "output": {
+            "type": "object",
+            "description": "The output data from the agent execution",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "description": "Error message if the execution failed",
+            "nullable": true
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/api/hooks/agents/{agentId}/webhooks/{webhookId}": {
+      "post": {
+        "summary": "Trigger Agent Webhook",
+        "description": "Triggers an agent execution via webhook. You can optionally provide configuration variables and a callback URL.",
+        "operationId": "triggerAgentWebhook",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The unique identifier of the agent"
+          },
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The unique identifier of the webhook"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TriggerAgentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Agent triggered successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TriggerAgentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hooks/agents/{agentId}/invocations/{invocationId}/result": {
+      "get": {
+        "summary": "Get Invocation Result",
+        "description": "Retrieves the status and result of a specific agent invocation.",
+        "operationId": "getInvocationResult",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The unique identifier of the agent"
+          },
+          {
+            "name": "invocationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The unique identifier of the invocation to check"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invocation result retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvocationResultResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
