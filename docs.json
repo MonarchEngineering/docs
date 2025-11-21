@@ -22,6 +22,14 @@
           "guides/authentication",
           "guides/bot-detection"
         ]
+      },
+      {
+        "group": "Connections",
+        "pages": [
+          "connections/make",
+          "connections/n8n",
+          "connections/zapier"
+        ]
       }
     ]
   },
