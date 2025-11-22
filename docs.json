@@ -8,8 +8,8 @@
     "dark": "#0891B2"
   },
   "appearance": {
-    "default": "system",
-    "strict": false
+    "default": "light",
+    "strict": true
   },
   "favicon": "/favicon.svg",
   "navigation": {
