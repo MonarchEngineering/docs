@@ -22,28 +22,26 @@ keywords: ["Zapier","connections","integrations","automation"]
     In your Zapier recipe (Zap), add the action **Run an Airtop agent** from the Airtop integration.
 
     <Frame>
-      ![Add Airtop action in Zapier](/images/connections/zapier-add-airtop.gif)
+      <img
+        src="/images/connections/zapier-add-airtop.gif"
+        alt="Add Airtop action in Zapier"
+        style={{ width:"100%" }}
+      />
     </Frame>
   </Step>
-  <Step title="Configure the Webhook URL">
-    Enter the Webhook URL from the connection modal into the **Webhook URL** field.
-
-    ```bash
-    # Example of a Webhook URL
-    https://api.airtop.ai/api/hooks/agents/{agent-id}/webhooks/{webhook-id}
-    ```
+  <Step title="Select your agent">
+    In the **Agent** dropdown, select the agent you want to use. If you don't see an agent listed, check the Airtop portal to ensure it is enabled.
   </Step>
   <Step title="Set Agent parameters">
-    Paste the Agent's parameters from the connection modal into the **JSON** field in the Zapier action.
+    After selecting the agent, the necessary paratemers will be loaded and displayed automatically. Configure the values accordingly. _Remember to check the field's tooltips for things like field constraints and formats_.
 
-    ```json
-    // Example of Agent parameters
-    {
-      "configVars": {
-        // Your Agent's configuration variables
-      }
-    }
-    ```
+    <Frame>
+      <img
+        src="/images/connections/zapier-set-agent-fields.gif"
+        alt="Set Agent parameters"
+        style={{ width:"100%" }}
+      />
+    </Frame>
   </Step>
   <Step title="Test the step and save">
     Test the step to ensure the connection works, then save your Zap.
