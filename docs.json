@@ -24,6 +24,12 @@
         ]
       },
       {
+        "group": "Airtop Account",
+        "pages": [
+          "billing/billing"
+        ]
+      },
+      {
         "group": "Connections",
         "pages": [
           "connections/make",
