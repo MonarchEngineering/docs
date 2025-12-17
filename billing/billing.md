@@ -1,12 +1,7 @@
 ---
 title: "Billing & Credits"
-description: "How billing works and how credits are renewed"
+description: "This guide explains how Airtop billing works, how credits are renewed and rolled over, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same."
 ---
-
-## Overview
-
-This guide explains how Airtop billing works, how credits are renewed and rolled over, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
-
 
 ## How Credits Work
 
