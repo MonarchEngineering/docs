@@ -1,4 +1,4 @@
-# AGENTS.md
+# [AGENTS.md](http://AGENTS.md)
 
 This file provides instructions for AI agents working with the Airtop documentation project.
 
@@ -9,10 +9,12 @@ This is a Mintlify-based documentation site for Airtop. The project structure fo
 ## Quick Start for Agents
 
 ### Prerequisites
+
 - Node.js v19 or higher
 - npm package manager
 
 ### Installation & Setup
+
 ```bash
 # Install Mintlify CLI globally
 npm i -g mint
@@ -57,13 +59,16 @@ docs/
 ## Key Files
 
 ### `docs.json`
+
 - Main configuration file
 - Contains navigation structure, site metadata, colors, etc.
 - **Important**: Navigation structure is defined here, not in individual files
 
 ### Content Files
+
 - All content is in MDX format (`.mdx` files)
 - Frontmatter required for each page:
+
   ```mdx
   ---
   title: "Page Title"
@@ -72,7 +77,9 @@ docs/
   ```
 
 ### Navigation Structure
+
 The navigation is organized as:
+
 - **Guides**: Main documentation sections
   - Introduction
   - Quick Start
@@ -84,17 +91,20 @@ The navigation is organized as:
 ## Common Tasks for Agents
 
 ### Adding New Pages
+
 1. Create `.mdx` file in appropriate directory
 2. Add frontmatter with title and description
 3. Update navigation in `docs.json`
 4. Test with `mint dev`
 
 ### Editing Existing Pages
+
 1. Locate the `.mdx` file
 2. Edit content while preserving frontmatter
 3. Test changes with `mint dev`
 
 ### Updating Navigation
+
 1. Edit the `navigation.groups` array in `docs.json`
 2. Follow the existing structure pattern
 3. Test with `mint dev`
@@ -164,31 +174,31 @@ You are an AI writing assistant specialized in creating exceptional technical do
 #### Note - Additional helpful information
 
 <Note>
-Supplementary information that supports the main content without interrupting flow
+  Supplementary information that supports the main content without interrupting flow
 </Note>
 
 #### Tip - Best practices and pro tips
 
 <Tip>
-Expert advice, shortcuts, or best practices that enhance user success
+  Expert advice, shortcuts, or best practices that enhance user success
 </Tip>
 
 #### Warning - Important cautions
 
 <Warning>
-Critical information about potential issues, breaking changes, or destructive actions
+  Critical information about potential issues, breaking changes, or destructive actions
 </Warning>
 
 #### Info - Neutral contextual information
 
 <Info>
-Background information, context, or neutral announcements
+  Background information, context, or neutral announcements
 </Info>
 
 #### Check - Success confirmations
 
 <Check>
-Positive confirmations, successful completions, or achievement indicators
+  Positive confirmations, successful completions, or achievement indicators
 </Check>
 
 ### Code components
@@ -212,11 +222,13 @@ const apiConfig = {
 Example of a code group:
 
 <CodeGroup>
+
 ```javascript Node.js
 const response = await fetch('/api/endpoint', {
   headers: { Authorization: `Bearer ${apiKey}` }
 });
 ```
+
 
 ```python Python
 import requests
@@ -224,10 +236,12 @@ response = requests.get('/api/endpoint',
   headers={'Authorization': f'Bearer {api_key}'})
 ```
 
+
 ```curl cURL
 curl -X GET '/api/endpoint' \
   -H 'Authorization: Bearer YOUR_API_KEY'
 ```
+
 </CodeGroup>
 
 #### Request/response examples
@@ -235,14 +249,17 @@ curl -X GET '/api/endpoint' \
 Example of request/response documentation:
 
 <RequestExample>
+
 ```bash cURL
 curl -X POST 'https://api.example.com/users' \
   -H 'Content-Type: application/json' \
   -d '{"name": "John Doe", "email": "john@example.com"}'
 ```
+
 </RequestExample>
 
 <ResponseExample>
+
 ```json Success
 {
   "id": "user_123",
@@ -251,6 +268,7 @@ curl -X POST 'https://api.example.com/users' \
   "created_at": "2024-01-15T10:30:00Z"
 }
 ```
+
 </ResponseExample>
 
 ### Structural components
@@ -260,25 +278,24 @@ curl -X POST 'https://api.example.com/users' \
 Example of step-by-step instructions:
 
 <Steps>
-<Step title="Install dependencies">
-  Run `npm install` to install required packages.
-  
-  <Check>
-  Verify installation by running `npm list`.
-  </Check>
-</Step>
+  <Step title="Install dependencies">
+    Run `npm install` to install required packages.
 
-<Step title="Configure environment">
-  Create a `.env` file with your API credentials.
-  
-  ```bash
-  API_KEY=your_api_key_here
-  ```
-  
-  <Warning>
-  Never commit API keys to version control.
-  </Warning>
-</Step>
+    <Check>
+      Verify installation by running `npm list`.
+    </Check>
+  </Step>
+  <Step title="Configure environment">
+    Create a `.env` file with your API credentials.
+
+    ```bash
+    API_KEY=your_api_key_here
+    ```
+
+    <Warning>
+      Never commit API keys to version control.
+    </Warning>
+  </Step>
 </Steps>
 
 #### Tabs for alternative content
@@ -286,26 +303,24 @@ Example of step-by-step instructions:
 Example of tabbed content:
 
 <Tabs>
-<Tab title="macOS">
-  ```bash
-  brew install node
-  npm install -g package-name
-  ```
-</Tab>
-
-<Tab title="Windows">
-  ```powershell
-  choco install nodejs
-  npm install -g package-name
-  ```
-</Tab>
-
-<Tab title="Linux">
-  ```bash
-  sudo apt install nodejs npm
-  npm install -g package-name
-  ```
-</Tab>
+  <Tab title="macOS">
+    ```bash
+    brew install node
+    npm install -g package-name
+    ```
+  </Tab>
+  <Tab title="Windows">
+    ```powershell
+    choco install nodejs
+    npm install -g package-name
+    ```
+  </Tab>
+  <Tab title="Linux">
+    ```bash
+    sudo apt install nodejs npm
+    npm install -g package-name
+    ```
+  </Tab>
 </Tabs>
 
 #### Accordions for collapsible content
@@ -313,25 +328,25 @@ Example of tabbed content:
 Example of accordion groups:
 
 <AccordionGroup>
-<Accordion title="Troubleshooting connection issues">
-  - **Firewall blocking**: Ensure ports 80 and 443 are open
-  - **Proxy configuration**: Set HTTP_PROXY environment variable
-  - **DNS resolution**: Try using 8.8.8.8 as DNS server
-</Accordion>
-
-<Accordion title="Advanced configuration">
-  ```javascript
-  const config = {
-    performance: { cache: true, timeout: 30000 },
-    security: { encryption: 'AES-256' }
-  };
-  ```
-</Accordion>
+  <Accordion title="Troubleshooting connection issues">
+    - **Firewall blocking**: Ensure ports 80 and 443 are open
+    - **Proxy configuration**: Set HTTP_PROXY environment variable
+    - **DNS resolution**: Try using 8.8.8.8 as DNS server
+  </Accordion>
+  <Accordion title="Advanced configuration">
+    ```javascript
+    const config = {
+      performance: { cache: true, timeout: 30000 },
+      security: { encryption: 'AES-256' }
+    };
+    ```
+  </Accordion>
 </AccordionGroup>
 
 ### Cards and columns for emphasizing information
 
 Example of cards and card groups:
+
 ```
 <Card title="Getting started guide" icon="rocket" href="/quickstart">
 Complete walkthrough from installation to your first API call in under 10 minutes.
@@ -355,19 +370,19 @@ Complete walkthrough from installation to your first API call in under 10 minute
 Example of parameter documentation:
 
 <ParamField path="user_id" type="string" required>
-Unique identifier for the user. Must be a valid UUID v4 format.
+  Unique identifier for the user. Must be a valid UUID v4 format.
 </ParamField>
 
 <ParamField body="email" type="string" required>
-User's email address. Must be valid and unique within the system.
+  User's email address. Must be valid and unique within the system.
 </ParamField>
 
-<ParamField query="limit" type="integer" default="10">
-Maximum number of results to return. Range: 1-100.
+<ParamField query="limit" default="10" type="integer">
+  Maximum number of results to return. Range: 1-100.
 </ParamField>
 
 <ParamField header="Authorization" type="string" required>
-Bearer token for API authentication. Format: `Bearer YOUR_API_KEY`
+  Bearer token for API authentication. Format: `Bearer YOUR_API_KEY`
 </ParamField>
 
 #### Response fields
@@ -375,15 +390,15 @@ Bearer token for API authentication. Format: `Bearer YOUR_API_KEY`
 Example of response field documentation:
 
 <ResponseField name="user_id" type="string" required>
-Unique identifier assigned to the newly created user.
+  Unique identifier assigned to the newly created user.
 </ResponseField>
 
 <ResponseField name="created_at" type="timestamp">
-ISO 8601 formatted timestamp of when the user was created.
+  ISO 8601 formatted timestamp of when the user was created.
 </ResponseField>
 
 <ResponseField name="permissions" type="array">
-List of permission strings assigned to this user.
+  List of permission strings assigned to this user.
 </ResponseField>
 
 #### Expandable nested fields
@@ -391,23 +406,22 @@ List of permission strings assigned to this user.
 Example of nested field documentation:
 
 <ResponseField name="user" type="object">
-Complete user object with all associated data.
+  Complete user object with all associated data.
 
-<Expandable title="User properties">
-  <ResponseField name="profile" type="object">
-  User profile information including personal details.
-  
-  <Expandable title="Profile details">
-    <ResponseField name="first_name" type="string">
-    User's first name as entered during registration.
-    </ResponseField>
-    
-    <ResponseField name="avatar_url" type="string | null">
-    URL to user's profile picture. Returns null if no avatar is set.
+  <Expandable title="User properties">
+    <ResponseField name="profile" type="object">
+      User profile information including personal details.
+
+      <Expandable title="Profile details">
+        <ResponseField name="first_name" type="string">
+          User's first name as entered during registration.
+        </ResponseField>
+        <ResponseField name="avatar_url" type="string | null">
+          URL to user's profile picture. Returns null if no avatar is set.
+        </ResponseField>
+      </Expandable>
     </ResponseField>
   </Expandable>
-  </ResponseField>
-</Expandable>
 </ResponseField>
 
 ### Media and advanced components
@@ -430,29 +444,18 @@ Wrap all images in frames:
 
 Use the HTML video element for self-hosted video content:
 
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="link-to-your-video.com"
-></video>
+<video controls className="w-full aspect-video rounded-xl" src="link-to-your-video.com" />
 
 Embed YouTube videos using iframe elements:
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/4KzFe50RQkQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
 
 #### Tooltips
 
 Example of tooltip usage:
 
 <Tooltip tip="Application Programming Interface - protocols for building software">
-API
+  API
 </Tooltip>
 
 #### Updates
@@ -460,13 +463,15 @@ API
 Use updates for changelogs:
 
 <Update label="Version 2.1.0" description="Released March 15, 2024">
-## New features
-- Added bulk user import functionality
-- Improved error messages with actionable suggestions
+  ## New features
 
-## Bug fixes
-- Fixed pagination issue with large datasets
-- Resolved authentication timeout problems
+  - Added bulk user import functionality
+  - Improved error messages with actionable suggestions
+
+  ## Bug fixes
+
+  - Fixed pagination issue with large datasets
+  - Resolved authentication timeout problems
 </Update>
 
 ## Required page structure
