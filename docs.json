@@ -20,7 +20,8 @@
           "guides/introduction",
           "guides/quick-start",
           "guides/authentication",
-          "guides/bot-detection"
+          "guides/bot-detection",
+          "guides/faq"
         ]
       },
       {
