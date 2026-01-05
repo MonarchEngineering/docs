@@ -29,30 +29,11 @@ keywords: ["Make","connections","integrations"]
       ![Add Run Agent module in Make](/images/connections/make-add-agent-module.png)
     </Frame>
   </Step>
-  <Step title="Configure the Webhook URL">
-    Enter the Webhook URL from the connection modal into the **Webhook URL** field.
-
-    ```bash
-    # Example of a Webhook URL
-    https://api.airtop.ai/api/hooks/agents/{agent-id}/webhooks/{webhook-id}
-    ```
-  </Step>
   <Step title="Set Agent parameters">
-    Copy the Agent's parameters from the connection modal and paste them into the **Parameters** field in the Make module. Adjust the values as needed.
-
-    ```json
-    // Example of Agent parameters
-    {
-      "configVars": {
-        // Your Agent's configuration variables
-      }
-    }
-    ```
-
-    When configured correctly, the module settings should look like this:
+    Select your agent from the dropdown and configure the parameters as needed.
 
     <Frame>
-      ![Make module configuration](/images/connections/make-module-config.png)
+      ![Make module configuration](/images/connections/make-agent-mod-config.gif)
     </Frame>
   </Step>
   <Step title="Run the scenario">
