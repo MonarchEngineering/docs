@@ -10,20 +10,13 @@ keywords: ["n8n","connections","integrations","workflow automation"]
 
 [n8n](https://n8n.io) is a workflow automation tool that enables you to connect apps and automate tasks. After you **deploy** your Agent, you can trigger it directly from n8n and process the results within your workflows.
 
-<iframe src="https://www.youtube.com/embed/5X-TO6BVfog" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mOnklHt8S8k?si=JOi8U-kQu0kgFlhZ&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Run your deployed Agent from n8n
 
-\*\*Note:\*\* Please [update](https://docs.n8n.io/release-notes/#how-to-update-n8n) your n8n instance to [ver 1.121.0](https://github.com/n8n-io/n8n/releases/tag/n8n%401.121.0) to gain access to Airtop Agents.
+**Note:** Make sure your n8n instance is in [version 2.6.0](https://github.com/n8n-io/n8n/releases/tag/n8n%402.6.0) or above to use the latest features of Airtop Agents. Visit _[How to update n8n](https://docs.n8n.io/release-notes/#how-to-update-n8n)_ for more details.
 
 <Steps>
-  <Step title="Open connection settings">
-    Navigate to your Agent's build page and click **Connect**, then select **n8n** from the dropdown.
-
-    <Frame>
-      ![Open connection settings for n8n](/images/connections/n8n-open-connect-settings.gif)
-    </Frame>
-  </Step>
   <Step title="Add the Airtop node">
     In your n8n workflow, add the Airtop **Run Agent** node.
 
@@ -31,30 +24,18 @@ keywords: ["n8n","connections","integrations","workflow automation"]
       ![Add Run Agent node in n8n](/images/connections/n8n-add-airtop-node.gif)
     </Frame>
   </Step>
-  <Step title="Configure the Webhook URL">
-    Enter the Webhook URL from the connection modal into the **Webhook URL** field.
-
-    ```bash
-    # Example of a Webhook URL
-    https://api.airtop.ai/api/hooks/agents/{agent-id}/webhooks/{webhook-id}
-    ```
-  </Step>
-  <Step title="Set Agent parameters">
-    Copy the Agent's parameters from the connection modal and paste them into the **Parameters** field in the n8n node. Adjust the values as needed.
-
-    ```json
-    // Example of Agent parameters
-    {
-      "configVars": {
-        // Your Agent's configuration variables
-      }
-    }
-    ```
-
-    When configured correctly, the node settings should look like this:
+  <Step title="Select your agent">
+    Choose your agent from the list. Type the agent name to filer out the results.
 
     <Frame>
-      ![n8n node configuration](/images/connections/n8n-node-config.png)
+      ![Select agent from the n8 node](/images/connections/n8n-node-select-agent.gif)
+    </Frame>
+  </Step>
+  <Step title="Set Agent parameters">
+    Fill the agent's input parameters in the section "Values to Send".
+
+    <Frame>
+      ![Set agent parameters](/images/connections/n8n-node-agent-parameters.png)
     </Frame>
   </Step>
   <Step title="Run the workflow">
