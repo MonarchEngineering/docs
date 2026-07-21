@@ -1,0 +1,63 @@
+---
+title: "Connect to Google Ads"
+sidebarTitle: "Google Ads"
+description: "The Google Ads integration lets your Airtop agent connect to a Google Ads advertiser account to audit performance, research keywords, plan campaigns, and make changes. All changes that can affect spend require your explicit approval before they are applied."
+keywords: ["Google Ads","integrations","ad automation", "ad campaigns"]
+---
+
+## Prerequisites
+
+* A Google account with access to at least one Google Ads advertiser account  
+* If your accounts are managed under a manager account (MCC), that's supported — you'll select the specific advertiser account to work with during setup  
+* Your Google Ads user role determines what the integration can do; if your role is read-only, then only these actions will work inside Airtop
+
+## Connecting your Google Ads account
+
+1. Connect via Google sign-in. You'll be asked to grant the Google Ads permission (https://www.googleapis.com/auth/adwords) — this is the only scope requested. Google describes it as "See, edit, create, and delete your Google Ads accounts and data."  
+2. Select the advertiser account you want the agent to manage. All tools operate only on this selected account. You can change the account at any time via Integration settings.
+
+## What the agent can do
+
+#### Reading and reporting (no approval needed — read-only)
+
+* Account overview — view the connected account's setup state and recent account-level performance  
+* Campaign reports — list campaigns and inspect their structure (ad groups, keywords, ads), status, and budgets  
+* Audits — review conversion goals, geo targeting, device performance, bidding and budgets, keyword hygiene, brand assets, and Quality Score  
+* Search Terms report — see which queries trigger your ads; raw search terms are masked by default to protect end-user privacy  
+* Wasted spend estimate — estimate budget leakage across common waste categories
+
+#### Keyword research and planning (read-only)
+
+* Keyword ideas — generate Google Keyword Planner suggestions for your account  
+* Historical metrics — get search volume, competition, and bid ranges for keywords you supply  
+* Budget estimation — estimate a minimum viable budget from your goals and CPC data
+
+#### Drafting (nothing is written to your account)
+
+* Draft campaign builds with structured ad groups, keyword grouping, and starter negative keywords  
+* Draft responsive search ad copy, including Dynamic Keyword Insertion  
+* Generate negative keyword proposals, landing page URL recommendations, and prioritized remediation plans from audit findings
+
+#### Changes (each one requires your approval before it's applied)
+
+* Create campaigns and ad groups — create paused Search campaigns and ad groups, complete with keywords and responsive search ads  
+* Budgets and bidding — adjust campaign budget amounts and bidding strategies  
+* Targeting — set presence-only location targeting, add location targets and exclusions, opt out of mobile traffic, adjust tablet bids, and control search partner network settings  
+* Keywords — add keywords, pause or enable them, and change bids or match types  
+* Negative keywords — add campaign, ad group, or shared negative keyword lists  
+* Ads — replace responsive search ad headlines and descriptions (note: editing an ad resets its performance history)  
+* Assets — link or unlink sitelinks  
+* Conversion goals — change biddability and primary-goal settings  
+* Status and renames — enable or pause campaigns, ad groups, and ads; rename campaigns and ad groups. Enabling a campaign starts spend.  
+* URL tracking — set an account-level final URL suffix (e.g., UTM parameters)
+
+## How approvals work
+
+When the agent wants to make a change, it submits a change request and you're prompted to approve or reject it. Nothing is written to your Google Ads account until you approve. The agent reports a change as applied only after the platform confirms it succeeded.
+
+## Limitations
+
+* API rate limits apply  
+* Operates only on the advertiser account selected during setup  
+* Does not automate Google Tag Manager, GA4, CRM sync, Customer Match uploads, landing page creation or CMS edits, or cross-platform attribution  
+* Keyword Planner, reports, and changes may be limited by your Google Ads account permissions, eligibility, access tier, or Google Policy
