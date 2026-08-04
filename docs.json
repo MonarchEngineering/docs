@@ -22,13 +22,8 @@
           "guides/authentication",
           "guides/bot-detection",
           "guides/self-healing",
+          "changelog",
           "guides/FAQ"
-        ]
-      },
-      {
-        "group": "Changelog",
-        "pages": [
-          "changelog"
         ]
       },
       {
