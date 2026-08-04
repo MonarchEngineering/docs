@@ -26,6 +26,12 @@
         ]
       },
       {
+        "group": "Changelog",
+        "pages": [
+          "changelog"
+        ]
+      },
+      {
         "group": "Airtop Account",
         "pages": [
           "billing/billing"
