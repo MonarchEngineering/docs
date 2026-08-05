@@ -1,0 +1,21 @@
+---
+title: "Changelog"
+description: "New Airtop features, improvements, and fixes."
+rss: true
+---
+
+<Update
+  label="August 5, 2026"
+  rss={{
+    title: "Self-healing",
+    description: "Airtop can prepare repairs for failed agents and pause agents after repeated failures."
+  }}
+>
+  ## Self-healing
+
+  Self-healing helps keep your deployed agents running when the websites and services they use change. When an eligible automated run fails, Airtop investigates the problem and prepares a tested repair draft for you to review. Your live agent remains unchanged until you choose to deploy the repair.
+
+  If an agent continues to fail, Airtop can automatically pause it to prevent repeated unattended failures. Automatic repair is enabled by default, and you can configure each agent's failure threshold in its self-healing settings.
+
+  Learn more about [self-healing](/guides/self-healing).
+</Update>
