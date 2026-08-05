@@ -21,6 +21,7 @@
           "guides/quick-start",
           "guides/authentication",
           "guides/bot-detection",
+          "guides/self-healing",
           "guides/FAQ"
         ]
       },
