@@ -81,5 +81,10 @@
       "x": "https://x.com/airtop_ai",
       "linkedin": "https://www.linkedin.com/company/airtop-ai"
     }
+  },
+  "integrations": {
+    "segment": {
+      "key": "flSE5abVLXbxloqwYuFhcEEho72yiWZm"
+    }
   }
 }
