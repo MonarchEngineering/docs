@@ -34,7 +34,7 @@
       },
       {
         "group": "Integrations",
-        "root": "integrations/index",
+        "root": "integrations/overview",
         "pages": [
           "integrations/google-ads"
         ]
