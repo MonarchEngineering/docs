@@ -18,6 +18,7 @@
         "group": "Guides",
         "pages": [
           "guides/introduction",
+          "guides/mark",
           "guides/quick-start",
           "guides/authentication",
           "guides/bot-detection",
