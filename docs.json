@@ -20,6 +20,7 @@
           "guides/introduction",
           "guides/mark",
           "guides/quick-start",
+          "guides/agent-builder",
           "guides/authentication",
           "guides/bot-detection",
           "guides/self-healing",
